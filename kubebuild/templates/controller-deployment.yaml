@@ -1,0 +1,48 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "kubebuild.fullname" . }}
+  labels:
+    app: {{ template "kubebuild.name" . }}
+    chart: {{ template "kubebuild.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "kubebuild.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "kubebuild.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      serviceAccountName: {{ template "kubebuild.fullname" . }}
+      containers:
+        - name: controller
+          image: "{{ .Values.controllerImage.repository }}:{{ .Values.controllerImage.tag }}"
+          imagePullPolicy: {{ .Values.controllerImage.pullPolicy }}
+          command: [ "workflow-controller" ]
+          args: ["--configmap", {{ template "kubebuild.fullname" . }}]
+          env:
+          - name: ARGO_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}

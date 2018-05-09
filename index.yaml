@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  kubebuild:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-05-09T20:17:20.771130494+10:00
+    description: KubeBuild Chart
+    digest: 39bb0740fa21f1f26aabe4056a880040e69e296abe2babb721ba932d558e61f4
+    name: kubebuild
+    urls:
+    - https://raw.githubusercontent.com/kubebuild/charts/master/kubebuild-0.1.0.tgz
+    version: 0.1.0
+generated: 2018-05-09T20:17:20.770635894+10:00
