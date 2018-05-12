@@ -30,7 +30,7 @@ spec:
               name: {{ template "api.fullname" . }}
           ports:
             - name: http
-              containerPort: 3000
+              containerPort: 3001
               protocol: TCP
           livenessProbe:
             httpGet:
