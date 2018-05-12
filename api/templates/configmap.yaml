@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "api.fullname" . }}
+  labels:
+    chart: {{ template "api.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+data:
+{{ toYaml .Values.app.envVars | indent 2 }}

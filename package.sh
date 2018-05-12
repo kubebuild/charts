@@ -10,6 +10,7 @@ usage()
 }
 
 helm package kubebuild
+helm package api
 
 helm serve --repo-path ./ &
 
