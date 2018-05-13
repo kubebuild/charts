@@ -12,6 +12,8 @@ image:
 
 app:
   envVars: {}
+  containerPort: 3000
+  healthPath: /health
 
 service:
   type: ClusterIP
