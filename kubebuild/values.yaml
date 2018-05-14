@@ -6,8 +6,12 @@ replicaCount: 1
 
 useReleaseAsInstanceID: false
 useDefaultArtifactRepo: false
+useStaticCredentials: true
 artifactRepository:
   s3:
+    bucket: my-bucket
+    endpoint: s3.amazonaws.com
+    keyPrefix: path
     accessKeySecret:
       key: accesskey
     secretKeySecret:
