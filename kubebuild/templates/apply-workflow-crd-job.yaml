@@ -10,7 +10,6 @@ spec:
   scope: Namespaced
   names:
     plural: workflows
-    singular: workflow
     kind: Workflow
     shortNames:
     - wf
