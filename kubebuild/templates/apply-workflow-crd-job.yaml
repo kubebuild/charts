@@ -9,8 +9,8 @@ spec:
   backoffLimit: 5
   activeDeadlineSeconds: 100
   template:
-    serviceAccountName: {{ template "kubebuild.fullname" . }}
     spec:
+      serviceAccountName: {{ template "kubebuild.fullname" . }}
       containers:
       - name: kubectl-apply
         image: lachlanevenson/k8s-kubectl
