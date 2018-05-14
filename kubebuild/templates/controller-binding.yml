@@ -9,3 +9,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: {{ template "kubebuild.fullname" . }}
+  namespace: kube-system
