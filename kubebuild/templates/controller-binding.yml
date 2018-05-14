@@ -1,11 +1,10 @@
 apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
+kind: ClusterRoleBinding
 metadata:
   name: {{ template "kubebuild.fullname" . }}
-  namespace: {{ .Release.Namespace }} 
 roleRef:
   apiGroup: rbac.authorization.k8s.io
-  kind: Role
+  kind: ClusterRole
   name: {{ template "kubebuild.fullname" . }}
 subjects:
 - kind: ServiceAccount
