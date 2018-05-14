@@ -1,19 +1,16 @@
-apiVersion: batch/v1
-kind: Job
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
 metadata:
-  name: {{ .Release.Name }}-apply-workflow-crd
+  name: workflows.argoproj.io
   annotations:
-    helm.sh/hook: post-install
-    helm.sh/hook-delete-policy: hook-succeeded
+    "helm.sh/hook": crd-install
 spec:
-  backoffLimit: 5
-  activeDeadlineSeconds: 100
-  template:
-    spec:
-      serviceAccountName: {{ template "kubebuild.fullname" . }}
-      containers:
-      - name: kubectl-apply
-        image: lachlanevenson/k8s-kubectl
-        command: ["/bin/sh"]
-        args: ["-c", 'echo ''{{- include "workflow-crd-json" .}}'' | kubectl apply -f -']
-      restartPolicy: Never
+  group: argoproj.io
+  version: v1alpha1
+  scope: Namespaced
+  names:
+    plural: workflows
+    singular: workflow
+    kind: Workflow
+    shortNames:
+    - wf
