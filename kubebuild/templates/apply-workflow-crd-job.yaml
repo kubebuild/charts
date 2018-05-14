@@ -6,6 +6,7 @@ metadata:
     helm.sh/hook: pre-install
     helm.sh/hook-delete-policy: hook-succeeded
 spec:
+  serviceAccountName: {{ template "kubebuild.fullname" . }}
   backoffLimit: 5
   activeDeadlineSeconds: 100
   template:
