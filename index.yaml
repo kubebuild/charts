@@ -3,7 +3,7 @@ entries:
   api:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-05-14T21:56:18.483761483+10:00
+    created: 2018-05-14T21:58:12.299740054+10:00
     description: Kubeapi chart
     digest: 0f9e7cd6f1f005d7b7cdf67b7760aecb39b33379d5aa6039ad617c88b66e161b
     name: api
@@ -13,7 +13,16 @@ entries:
   kubebuild:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-05-14T21:56:18.486490277+10:00
+    created: 2018-05-14T21:58:12.302566371+10:00
+    description: KubeBuild Chart
+    digest: 5de248343ae144e8e354e9b526191b6df2066e85925e463851795970a17369df
+    name: kubebuild
+    urls:
+    - https://raw.githubusercontent.com/kubebuild/charts/master/kubebuild-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-05-14T21:58:12.302228449+10:00
     description: KubeBuild Chart
     digest: ed9b574ac6a6111efc91cb20e0dcc828dbffb542dd441d8f5f6f9faf971c3be2
     name: kubebuild
@@ -22,7 +31,7 @@ entries:
     version: 0.1.8
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-05-14T21:56:18.486069029+10:00
+    created: 2018-05-14T21:58:12.301588302+10:00
     description: KubeBuild Chart
     digest: 9504bd707e84e99afe5451c5bc05003d175b87511441d15e8da4417ca8297909
     name: kubebuild
@@ -31,11 +40,11 @@ entries:
     version: 0.1.7
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-05-14T21:56:18.485272201+10:00
+    created: 2018-05-14T21:58:12.300809684+10:00
     description: KubeBuild Chart
     digest: 0c8450e33ee51fd95869c7d0eb84896983d5fdeed0452a3286d6987c0fc72133
     name: kubebuild
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/kubebuild-0.1.6.tgz
     version: 0.1.6
-generated: 2018-05-14T21:56:18.483179766+10:00
+generated: 2018-05-14T21:58:12.298613713+10:00
