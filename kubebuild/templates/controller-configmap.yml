@@ -18,14 +18,15 @@ data:
       s3:
         {{- if .Values.useStaticCredentials }}
         accessKeySecret:
-          key: {{ .Values.artifactRepository.s3.accessKeySecret.key }}
-          name: {{ .Values.artifactRepository.s3.accessKeySecret.name | default (printf "%s-%s" .Release.Name "s3-user") }}
+          key: accesskey
+          name: {{ template "kubebuild.fullname" . }}
         secretKeySecret:
-          key: {{ .Values.artifactRepository.s3.secretKeySecret.key }}
-          name: {{ .Values.artifactRepository.s3.secretKeySecret.name | default (printf "%s-%s" .Release.Name "s3-user") }}
+          key: secretkey
+          name: {{ template "kubebuild.fullname" . }}
         {{- end }}
         bucket: {{ .Values.artifactRepository.s3.bucket }}
         endpoint: {{ .Values.artifactRepository.s3.endpoint }}
         insecure: {{ .Values.artifactRepository.s3.insecure }}
+        region: {{ .Values.artifactRepository.s3.region }}
       {{- end}}
     executorImage: "{{ .Values.executorImage.repository }}:{{ .Values.executorImage.tag }}"

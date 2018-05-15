@@ -7,16 +7,16 @@ replicaCount: 1
 useReleaseAsInstanceID: false
 useDefaultArtifactRepo: true
 useStaticCredentials: true
+s3Secrets:
+  accessKey: aws_key_id
+  secretKey: aws_secret_key
 artifactRepository:
   s3:
     bucket: my-bucket
-    endpoint: s3.amazonaws.com
+    endpoint: s3.eu-west-3.amazonaws.com
     keyPrefix: path
-    accessKeySecret:
-      key: accesskey
-    secretKeySecret:
-      key: secretkey
-    insecure: true
+    region: eu-west-3
+    insecure: false
 
 controllerImage:
   repository: argoproj/workflow-controller
