@@ -25,6 +25,7 @@ data:
           name: {{ template "kubebuild.fullname" . }}
         {{- end }}
         bucket: {{ .Values.artifactRepository.s3.bucket }}
+        keyPrefix: {{ .Values.artifactRepository.s3.keyPrefix }}
         endpoint: {{ .Values.artifactRepository.s3.endpoint }}
         insecure: {{ .Values.artifactRepository.s3.insecure }}
         region: {{ .Values.artifactRepository.s3.region }}
