@@ -3,7 +3,8 @@ kind: CustomResourceDefinition
 metadata:
   name: workflows.argoproj.io
   annotations:
-    "helm.sh/hook": crd-install
+    helm.sh/hook: pre-install
+    helm.sh/hook-delete-policy: hook-succeeded
 spec:
   group: argoproj.io
   version: v1alpha1
