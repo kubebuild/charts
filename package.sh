@@ -11,6 +11,7 @@ usage()
 
 helm package kubebuild
 helm package api
+helm package oss-launcher
 
 helm serve --repo-path ./ &
 
