@@ -20,18 +20,18 @@ artifactRepository:
 
 controllerImage:
   repository: argoproj/workflow-controller
-  tag: v2.1.0
+  tag: v2.1.1
   pullPolicy: IfNotPresent
 
 executorImage:
   repository: argoproj/argoexec
-  tag: v2.1.0
+  tag: v2.1.1
 
 ui:
   enabled: false
   controllerImage:
     repository: argoproj/argoui
-    tag: v2.1.0
+    tag: v2.1.1
     pullPolicy: IfNotPresent
 
   service:

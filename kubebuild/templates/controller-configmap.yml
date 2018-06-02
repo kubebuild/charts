@@ -19,10 +19,10 @@ data:
         {{- if .Values.useStaticCredentials }}
         accessKeySecret:
           key: accesskey
-          name: {{ template "kubebuild.fullname" . }}
+          name: kubebuild-s3
         secretKeySecret:
           key: secretkey
-          name: {{ template "kubebuild.fullname" . }}
+          name: kubebuild-s3
         {{- end }}
         bucket: {{ .Values.artifactRepository.s3.bucket }}
         keyPrefix: {{ .Values.artifactRepository.s3.keyPrefix }}
