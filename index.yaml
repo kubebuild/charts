@@ -3,26 +3,27 @@ entries:
   api:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-06-06T22:33:31.170048686+10:00
+    created: 2018-06-07T18:02:19.891606228+10:00
     description: Kubeapi chart
     digest: cf34b379f75f0b38c6e5a27cc8711f6370a890bcff859b6e90ff71dc7b1b705b
     name: api
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/api-0.1.9.tgz
     version: 0.1.9
+  kube-launcher:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-06-06T22:33:31.169807767+10:00
-    description: Kubeapi chart
-    digest: 244b7bab7953f680b420911b446c59e8c737517cfb159a29e5eac55b7374f938
-    name: api
+    created: 2018-06-07T18:02:19.891866741+10:00
+    description: A chart for launching oss clusters
+    digest: c8a8f1e360dab964dfa5440152dc0b95c2f385891ed518860fc5541dc24f1537
+    name: kube-launcher
     urls:
-    - https://raw.githubusercontent.com/kubebuild/charts/master/api-0.1.8.tgz
-    version: 0.1.8
+    - https://raw.githubusercontent.com/kubebuild/charts/master/kube-launcher-0.1.0.tgz
+    version: 0.1.0
   kubebuild:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-06-06T22:33:31.171015191+10:00
+    created: 2018-06-07T18:02:19.892945838+10:00
     description: KubeBuild Chart
     digest: 49950cda59d25514648fba677c75f9d762758b5a4e20e294e1177f089fc276e1
     name: kubebuild
@@ -31,21 +32,11 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-06-06T22:33:31.170728177+10:00
+    created: 2018-06-07T18:02:19.892604328+10:00
     description: KubeBuild Chart
     digest: e63c9c2b86f516559588316b228817eb52065b43f428b0fdfa0c46d7a94cbe1b
     name: kubebuild
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/kubebuild-0.2.9.tgz
     version: 0.2.9
-  oss-launcher:
-  - apiVersion: v1
-    appVersion: "1.0"
-    created: 2018-06-06T22:33:31.171216868+10:00
-    description: A chart for launching oss clusters
-    digest: 7565451580339b1e23de04f517eaf64319c297c5a07f65587ef7a172c2e5e996
-    name: oss-launcher
-    urls:
-    - https://raw.githubusercontent.com/kubebuild/charts/master/oss-launcher-0.1.0.tgz
-    version: 0.1.0
-generated: 2018-06-06T22:33:31.168784058+10:00
+generated: 2018-06-07T18:02:19.890807326+10:00

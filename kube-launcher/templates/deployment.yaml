@@ -1,10 +1,10 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: {{ template "oss-launcher.fullname" . }}
+  name: {{ template "kube-launcher.fullname" . }}
   labels:
-    app: {{ template "oss-launcher.name" . }}
-    chart: {{ template "oss-launcher.chart" . }}
+    app: {{ template "kube-launcher.name" . }}
+    chart: {{ template "kube-launcher.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
@@ -16,21 +16,24 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ template "oss-launcher.name" . }}
+      app: {{ template "kube-launcher.name" . }}
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: {{ template "oss-launcher.name" . }}
+        app: {{ template "kube-launcher.name" . }}
         release: {{ .Release.Name }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          args: {{ .Values.app.args }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-          - name: TOKEN
-            value: {{ .Values.app.token }}
+          - name: K8S_TOKEN
+            value: {{ .Values.app.k8sToken }}
+          - name: CLUSTER_TOKEN
+            value: {{ .Values.app.clusterToken }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}

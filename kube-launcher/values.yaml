@@ -1,16 +1,19 @@
-# Default values for oss-launcher.
+# Default values for kube-launcher.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: kubebuild/oss-launcher
+  repository: kubebuild/kube-launcher
   tag: 1
   pullPolicy: IfNotPresent
 
 app:
-  token: sometoken
+  k8sToken: sometoken
+  clusterToken: sometoken
+  args:
+   - index.js
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
