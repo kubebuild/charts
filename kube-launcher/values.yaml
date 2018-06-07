@@ -11,8 +11,7 @@ image:
   pullSecret: dockerhub
 
 app:
-  k8sToken: sometoken
-  clusterToken: sometoken
+  envVars: {}
   args:
    - index.js
 
