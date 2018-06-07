@@ -8,6 +8,7 @@ image:
   repository: kubebuild/kube-launcher
   tag: 1
   pullPolicy: IfNotPresent
+  pullSecret: dockerhub
 
 app:
   k8sToken: sometoken
