@@ -31,8 +31,9 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           args: {{ .Values.app.args }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          env:
-{{ toYaml .Values.app.envVars | indent 12 }} 
+          envFrom:
+          - configMapRef:
+              name: {{ template "kube-launcher.fullname" . }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
