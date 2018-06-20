@@ -7,6 +7,9 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 rules:
+- apiGroups: ["batch", "extensions"]
+  resources: ["jobs"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
 - apiGroups:
   - ""
   resources:
@@ -40,8 +43,10 @@ rules:
   resources:
   - workflows
   verbs:
+  - create
   - get
   - list
   - watch
   - update
+  - delete
   - patch
