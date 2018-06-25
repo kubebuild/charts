@@ -33,15 +33,17 @@ spec:
               containerPort: {{ .Values.app.containerPort }}
               protocol: TCP
           livenessProbe:
-            initialDelaySeconds: 90
             httpGet:
               path: {{ .Values.app.healthPath }}
               port: http
+            initialDelaySeconds: 90
+            periodSeconds: 1
           readinessProbe:
-            initialDelaySeconds: 90
             httpGet:
               path: {{ .Values.app.healthPath }}
               port: http
+            initialDelaySeconds: 90
+            periodSeconds: 1
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
