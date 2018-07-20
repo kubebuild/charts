@@ -27,7 +27,7 @@ launcherApp:
   envVars:
     NODE_ENV: production
     CLUSTER_TOKEN: secret
-    IN_CLUSTER: true
+    IN_CLUSTER: "true"
   args:
     - buildScheduler.js
 

@@ -7,4 +7,4 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 data:
-  {{ .Values.launcherApp.envVars }}
+{{ toYaml .Values.launcherApp.envVars | indent 2 }}
