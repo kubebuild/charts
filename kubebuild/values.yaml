@@ -24,7 +24,10 @@ launcherImage:
   pullPolicy: Always
 
 launcherApp:
-  envVars: {}
+  envVars:
+    NODE_ENV: production
+    CLUSTER_TOKEN: secret
+    IN_CLUSTER: true
   args:
     - buildScheduler.js
 
