@@ -3,26 +3,26 @@ entries:
   api:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-06-25T21:47:30.610429635+10:00
+    created: 2018-07-20T16:41:33.097806842+10:00
     description: Kubeapi chart
     digest: 466734794e44a3e0f2e6b01953f062f738ca4ed598afb04d5136c21e9d267866
     name: api
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/api-0.2.1.tgz
     version: 0.2.1
-  - apiVersion: v1
-    appVersion: "1.0"
-    created: 2018-06-25T21:47:30.61019118+10:00
-    description: Kubeapi chart
-    digest: e8a7a872c33948bb2684ce59f47e9624065e6fd4d1965c2d7f0fa3eb418ce1c1
-    name: api
-    urls:
-    - https://raw.githubusercontent.com/kubebuild/charts/master/api-0.2.0.tgz
-    version: 0.2.0
   kube-launcher:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-06-25T21:47:30.610643061+10:00
+    created: 2018-07-20T16:41:33.098616406+10:00
+    description: A chart for launching oss clusters
+    digest: 26a1b134fb4e46e1f065cd066a9f28a44b84de1fd4ad086530b6ddb0276e1111
+    name: kube-launcher
+    urls:
+    - https://raw.githubusercontent.com/kubebuild/charts/master/kube-launcher-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-07-20T16:41:33.098378242+10:00
     description: A chart for launching oss clusters
     digest: cf8c3ffe7bf98d001a1ae06155e1c6bff21e553c936fac449f25d7c90adb654c
     name: kube-launcher
@@ -32,11 +32,20 @@ entries:
   kubebuild:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-06-25T21:47:30.610986315+10:00
+    created: 2018-07-20T16:41:33.099567219+10:00
+    description: KubeBuild Chart
+    digest: fe24d44e07ffdd0cbdf4c8124fa87f6e75d3c9547e2820de27127c0919c0798f
+    name: kubebuild
+    urls:
+    - https://raw.githubusercontent.com/kubebuild/charts/master/kubebuild-0.3.2.tgz
+    version: 0.3.2
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-07-20T16:41:33.099209456+10:00
     description: KubeBuild Chart
     digest: 6b3d37ce850aa62799ddf672313adcf72b91ab4ebb23fd5d8c37744749c6d49f
     name: kubebuild
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/kubebuild-0.3.1.tgz
     version: 0.3.1
-generated: 2018-06-25T21:47:30.609414351+10:00
+generated: 2018-07-20T16:41:33.097283582+10:00

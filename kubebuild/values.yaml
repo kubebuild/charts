@@ -18,6 +18,16 @@ artifactRepository:
     region: eu-west-3
     insecure: false
 
+launcherImage:
+  repository: kubebuild/kube-launcher
+  tag: latest
+  pullPolicy: Always
+
+launcherApp:
+  envVars: {}
+  args:
+    - buildScheduler.js
+
 controllerImage:
   repository: argoproj/workflow-controller
   tag: v2.1.1

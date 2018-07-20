@@ -1,10 +1,9 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: {{ template "kube-launcher.fullname" . }}
+  name: "{{ template "kubebuild.fullname" . }}-launcher"
   labels:
-    app: {{ template "kube-launcher.name" . }}
-    chart: {{ template "kube-launcher.chart" . }}
+    chart: {{ template "kubebuild.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
@@ -16,22 +15,23 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ template "kube-launcher.name" . }}
+      app: "{{ template "kubebuild.name" . }}-launcher"
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: {{ template "kube-launcher.name" . }}
+        app: {{ template "kubebuild.name" . }}-launcher
         release: {{ .Release.Name }}
     spec:
+      serviceAccountName: {{ template "kubebuild.fullname" . }}
       containers:
-        - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          args: {{ .Values.app.args }}
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+        - name: "{{ .Chart.Name }}-launcher"
+          image: "{{ .Values.launcherImage.repository }}:{{ .Values.launcherImage.tag }}"
+          args: {{ .Values.launcherApp.args }}
+          imagePullPolicy: {{ .Values.launcherImage.pullPolicy }}
           envFrom:
           - configMapRef:
-              name: {{ template "kube-launcher.fullname" . }}
+              name: "{{ template "kubebuild.fullname" . }}-launcher"
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}

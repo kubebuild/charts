@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "kubebuild.fullname" . }}-launcher
+  labels:
+    chart: {{ template "kubebuild.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+data:
+{{ toYaml .Values.launcherApp.envVars | indent 2 }}
