@@ -27,10 +27,12 @@ rules:
   resources:
   - configmaps
   - secrets
+  - deployments
   verbs:
   - get
   - watch
   - list
+  - update
 - apiGroups:
   - ""
   resources:

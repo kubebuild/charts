@@ -32,13 +32,13 @@ launcherApp:
     - buildScheduler.js
 
 controllerImage:
-  repository: argoproj/workflow-controller
-  tag: v2.1.1
+  repository: kubebuild/workflow-controller
+  tag: v2.1.3
   pullPolicy: IfNotPresent
 
 executorImage:
-  repository: argoproj/argoexec
-  tag: v2.1.1
+  repository: kubebuild/argoexec
+  tag: v2.1.3
 
 ui:
   enabled: false
