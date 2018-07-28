@@ -29,10 +29,12 @@ rules:
   - secrets
   - deployments
   verbs:
+  - create
   - get
   - watch
   - list
   - update
+  - patch
 - apiGroups:
   - ""
   resources:
