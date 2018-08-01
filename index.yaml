@@ -3,7 +3,7 @@ entries:
   api:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-08-02T00:38:01.50239117+10:00
+    created: 2018-08-02T00:49:31.830546467+10:00
     description: Kubeapi chart
     digest: 466734794e44a3e0f2e6b01953f062f738ca4ed598afb04d5136c21e9d267866
     name: api
@@ -13,7 +13,7 @@ entries:
   kube-launcher:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-08-02T00:38:01.502604924+10:00
+    created: 2018-08-02T00:49:31.830744883+10:00
     description: A chart for launching oss clusters
     digest: 26a1b134fb4e46e1f065cd066a9f28a44b84de1fd4ad086530b6ddb0276e1111
     name: kube-launcher
@@ -23,11 +23,11 @@ entries:
   kubebuild:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-08-02T00:38:01.502913156+10:00
+    created: 2018-08-02T00:49:31.831052279+10:00
     description: KubeBuild Chart
-    digest: 30410685cd6f7a7f60bd6a1b6d12d23659a7f59b1d81b023a47402ed1edffbba
+    digest: 454c5c85cc3a68c7b197b32f7645a0bb5e3788d926e1e370bda49070986ab5cb
     name: kubebuild
     urls:
-    - https://raw.githubusercontent.com/kubebuild/charts/master/kubebuild-0.4.3.tgz
-    version: 0.4.3
-generated: 2018-08-02T00:38:01.501615325+10:00
+    - https://raw.githubusercontent.com/kubebuild/charts/master/kubebuild-0.4.4.tgz
+    version: 0.4.4
+generated: 2018-08-02T00:49:31.830055132+10:00
