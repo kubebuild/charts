@@ -36,6 +36,17 @@ rules:
   - update
   - patch
 - apiGroups:
+  - "extensions"
+  resources:
+  - deployments
+  verbs:
+  - create
+  - get
+  - watch
+  - list
+  - update
+  - patch
+- apiGroups:
   - ""
   resources:
   - persistentvolumeclaims
