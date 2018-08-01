@@ -23,7 +23,7 @@ spec:
         app: {{ template "kubebuild.name" . }}-launcher
         release: {{ .Release.Name }}
     spec:
-      serviceAccountName: {{ template "kubebuild.fullname" . }}-launcher
+      serviceAccountName: {{ template "kubebuild.fullname" . }}
       containers:
         - name: "{{ .Chart.Name }}-launcher"
           image: "{{ .Values.launcherImage.repository }}:{{ .Values.launcherImage.tag }}"
