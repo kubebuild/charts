@@ -27,10 +27,25 @@ rules:
   resources:
   - configmaps
   - secrets
+  - deployments
   verbs:
+  - create
   - get
   - watch
   - list
+  - update
+  - patch
+- apiGroups:
+  - "extensions"
+  resources:
+  - deployments
+  verbs:
+  - create
+  - get
+  - watch
+  - list
+  - update
+  - patch
 - apiGroups:
   - ""
   resources:
