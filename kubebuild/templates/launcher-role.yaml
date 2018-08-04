@@ -22,7 +22,9 @@ rules:
   - configmaps
   - secrets
   verbs: ["*"]
-- apiGroups: ["", "extensions"]
+- apiGroups:
+  - extensions
+  - apps
   resources:
   - deployments
   verbs: ["*"]
