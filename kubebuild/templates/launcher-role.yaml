@@ -21,13 +21,13 @@ rules:
   resources:
   - configmaps
   - secrets
-  verbs: ["*"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
 - apiGroups:
   - extensions
   - apps
   resources:
   - deployments
-  verbs: ["*"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
 - apiGroups:
   - ""
   resources:

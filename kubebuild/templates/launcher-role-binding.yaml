@@ -8,8 +8,8 @@ metadata:
     heritage: {{ .Release.Service }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: {{ template "kubebuild.fullname" . }}
+  kind: Role
+  name: {{ template "kubebuild.fullname" . }}-launcher
 subjects:
 - kind: ServiceAccount
   name: {{ template "kubebuild.fullname" . }}-launcher
