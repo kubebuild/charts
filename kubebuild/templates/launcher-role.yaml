@@ -15,37 +15,17 @@ rules:
   resources:
   - pods
   - pods/exec
-  verbs:
-  - create
-  - get
-  - list
-  - watch
-  - update
-  - patch
+  verbs: ["*"]
 - apiGroups:
   - ""
   resources:
   - configmaps
   - secrets
-  - deployments
-  verbs:
-  - create
-  - get
-  - watch
-  - list
-  - update
-  - patch
-- apiGroups:
-  - "extensions"
+  verbs: ["*"]
+- apiGroups: ["", "extensions"]
   resources:
   - deployments
-  verbs:
-  - create
-  - get
-  - watch
-  - list
-  - update
-  - patch
+  verbs: ["*"]
 - apiGroups:
   - ""
   resources:
