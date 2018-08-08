@@ -12,6 +12,7 @@ usage()
 helm package kubebuild
 helm package api
 helm package kube-launcher
+helm package webhooks
 
 helm serve --repo-path ./ &
 
