@@ -25,7 +25,11 @@ spec:
           image: "{{ .Values.controllerImage.repository }}:{{ .Values.controllerImage.tag }}"
           imagePullPolicy: {{ .Values.controllerImage.pullPolicy }}
           command: [ "workflow-controller" ]
-          args: ["--configmap", {{ template "kubebuild.fullname" . }}]
+          args: 
+            - --configmap
+            - {{ template "kubebuild.fullname" . }}
+            - --executor-image
+            - "{{ .Values.executorImage.repository }}:{{ .Values.executorImage.tag }}"
           env:
           - name: ARGO_NAMESPACE
             valueFrom:
