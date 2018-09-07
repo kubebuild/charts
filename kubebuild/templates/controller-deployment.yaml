@@ -31,6 +31,8 @@ spec:
             - --executor-image
             - "{{ .Values.executorImage.repository }}:{{ .Values.executorImage.tag }}"
           env:
+          - name: ARGO_CONTAINER_RUNTIME_EXECUTOR
+            value: kubelet
           - name: ARGO_NAMESPACE
             valueFrom:
               fieldRef:
