@@ -48,3 +48,4 @@ rules:
   - update
   - delete
   - patch
+  - deletecollection
