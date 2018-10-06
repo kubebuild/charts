@@ -3,26 +3,17 @@ entries:
   api:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-03T17:21:14.477368163+10:00
+    created: 2018-10-06T22:20:30.333933131+10:00
     description: Kubeapi chart
     digest: d1b028585e94745a24efbaac7687aaa477f16c05614a4ac0cc2195dc9b17b61e
     name: api
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/api-0.2.2.tgz
     version: 0.2.2
-  - apiVersion: v1
-    appVersion: "1.0"
-    created: 2018-10-03T17:21:14.477072253+10:00
-    description: Kubeapi chart
-    digest: 466734794e44a3e0f2e6b01953f062f738ca4ed598afb04d5136c21e9d267866
-    name: api
-    urls:
-    - https://raw.githubusercontent.com/kubebuild/charts/master/api-0.2.1.tgz
-    version: 0.2.1
   kube-launcher:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-03T17:21:14.477600233+10:00
+    created: 2018-10-06T22:20:30.33414958+10:00
     description: A chart for launching oss clusters
     digest: 26a1b134fb4e46e1f065cd066a9f28a44b84de1fd4ad086530b6ddb0276e1111
     name: kube-launcher
@@ -32,21 +23,21 @@ entries:
   kubebuild:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-03T17:21:14.478050623+10:00
+    created: 2018-10-06T22:20:30.334546733+10:00
     description: KubeBuild Chart
-    digest: 05521b71175ac4174aabcfc38405520d7c0c2ed24d2414a6305a86ab44fe5777
+    digest: f6fcaf6182e7e19a3b209692e317ee2ab8daf1ca6eb4e9fafd75e925b7a8cbe5
     name: kubebuild
     urls:
-    - https://raw.githubusercontent.com/kubebuild/charts/master/kubebuild-0.5.5.tgz
-    version: 0.5.5
+    - https://raw.githubusercontent.com/kubebuild/charts/master/kubebuild-0.5.6.tgz
+    version: 0.5.6
   webhooks:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-03T17:21:14.478326356+10:00
+    created: 2018-10-06T22:20:30.334799718+10:00
     description: A Helm chart for Kubernetes
     digest: 4b30b3f3210737e6b5427e0869a0eb7bb1048eec0cb9637258dca80034b32ecd
     name: webhooks
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/webhooks-0.1.0.tgz
     version: 0.1.0
-generated: 2018-10-03T17:21:14.476258043+10:00
+generated: 2018-10-06T22:20:30.333394438+10:00
