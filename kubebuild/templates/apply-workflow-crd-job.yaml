@@ -1,3 +1,4 @@
+{{- if semverCompare "<=2.10-0" .Capabilities.TillerVersion.SemVer }}
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -17,3 +18,4 @@ spec:
         command: ["/bin/sh"]
         args: ["-c", 'echo ''{{- include "workflow-crd-json" .}}'' | kubectl apply -f -']
       restartPolicy: Never
+{{- end -}}
