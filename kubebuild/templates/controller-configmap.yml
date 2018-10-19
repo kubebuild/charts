@@ -31,4 +31,3 @@ data:
         insecure: {{ .Values.artifactRepository.s3.insecure }}
         region: {{ .Values.artifactRepository.s3.region }}
       {{- end}}
-    executorImage: "{{ .Values.executorImage.repository }}:{{ .Values.executorImage.tag }}"
