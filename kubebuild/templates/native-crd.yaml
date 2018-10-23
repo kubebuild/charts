@@ -5,6 +5,7 @@ metadata:
   name: workflows.argoproj.io
   annotations:
     "helm.sh/hook": crd-install
+    "helm.sh/hook-delete-policy": "before-hook-creation"
   labels:
     chart: {{ template "kubebuild.chart" . }}
     release: {{ .Release.Name }}
