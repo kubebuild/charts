@@ -1,4 +1,3 @@
-{{- if semverCompare "<=2.10-0" .Capabilities.TillerVersion.SemVer }}
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -8,7 +7,7 @@ metadata:
     helm.sh/hook-delete-policy: hook-succeeded
 spec:
   backoffLimit: 5
-  activeDeadlineSeconds: 300
+  activeDeadlineSeconds: 400
   template:
     spec:
       serviceAccountName: {{ template "kubebuild.fullname" . }}
@@ -18,4 +17,3 @@ spec:
         command: ["/bin/sh"]
         args: ["-c", 'echo ''{{- include "workflow-crd-json" .}}'' | kubectl apply -f -']
       restartPolicy: Never
-{{- end -}}
