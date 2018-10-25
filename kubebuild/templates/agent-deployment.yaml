@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: "{{ template "kubebuild.fullname" . }}-launcher"
+  name: "{{ template "kubebuild.fullname" . }}-agent"
   labels:
     chart: {{ template "kubebuild.chart" . }}
     release: {{ .Release.Name }}
@@ -15,23 +15,23 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: "{{ template "kubebuild.name" . }}-launcher"
+      app: "{{ template "kubebuild.name" . }}-agent"
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: {{ template "kubebuild.name" . }}-launcher
+        app: {{ template "kubebuild.name" . }}-agent
         release: {{ .Release.Name }}
     spec:
-      serviceAccountName: {{ template "kubebuild.fullname" . }}-launcher
+      serviceAccountName: {{ template "kubebuild.fullname" . }}-agent
       containers:
-        - name: "{{ .Chart.Name }}-launcher"
+        - name: "{{ .Chart.Name }}-agent"
           image: "{{ .Values.launcherImage.repository }}:{{ .Values.launcherImage.tag }}"
           args: {{ .Values.launcherApp.args }}
           imagePullPolicy: {{ .Values.launcherImage.pullPolicy }}
           envFrom:
           - configMapRef:
-              name: "{{ template "kubebuild.fullname" . }}-launcher"
+              name: "{{ template "kubebuild.fullname" . }}-agent"
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}

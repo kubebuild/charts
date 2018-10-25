@@ -1,7 +1,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  name: {{ template "kubebuild.fullname" . }}-launcher
+  name: {{ template "kubebuild.fullname" . }}-agent
   labels:
     chart: {{ template "kubebuild.chart" . }}
     release: {{ .Release.Name }}

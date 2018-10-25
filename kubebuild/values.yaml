@@ -19,17 +19,15 @@ artifactRepository:
     insecure: false
 
 launcherImage:
-  repository: kubebuild/kube-launcher
+  repository: kubebuild/agent
   tag: latest
   pullPolicy: Always
 
 launcherApp:
   envVars:
-    NODE_ENV: production
     CLUSTER_TOKEN: secret
-    IN_CLUSTER: "true"
   args:
-    - buildScheduler.js
+    - "-- cluster-token $CLUSTER_TOKEN"
 
 controllerImage:
   repository: kubebuild/workflow-controller
@@ -38,13 +36,13 @@ controllerImage:
 
 executorImage:
   repository: kubebuild/argoexec
-  tag: v2.2.0
+  tag: v2.2.1
 
 ui:
   enabled: false
   controllerImage:
     repository: argoproj/argoui
-    tag: v2.2.0
+    tag: v2.2.1
     pullPolicy: IfNotPresent
 
   service:
@@ -64,17 +62,17 @@ ui:
     #    hosts:
     #      - chart-example.local
 
-resources: {}
+resources:
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-  # limits:
-  #  cpu: 100m
-  #  memory: 128Mi
-  # requests:
-  #  cpu: 100m
-  #  memory: 128Mi
+  limits:
+   cpu: 100m
+   memory: 128Mi
+  requests:
+   cpu: 100m
+   memory: 128Mi
 
 nodeSelector: {}
 
