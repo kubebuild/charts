@@ -27,7 +27,7 @@ launcherApp:
   envVars:
     CLUSTER_TOKEN: secret
   args:
-    - "-- cluster-token"
+    - "--token"
     - "$(CLUSTER_TOKEN)"
 
 controllerImage:
