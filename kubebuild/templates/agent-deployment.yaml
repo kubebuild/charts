@@ -27,7 +27,8 @@ spec:
       containers:
         - name: "{{ .Chart.Name }}-agent"
           image: "{{ .Values.launcherImage.repository }}:{{ .Values.launcherImage.tag }}"
-          args: {{ .Values.launcherApp.args }}
+          args:
+{{ toYaml .Values.launcherApp.args | indent 10 }}
           imagePullPolicy: {{ .Values.launcherImage.pullPolicy }}
           envFrom:
           - configMapRef:

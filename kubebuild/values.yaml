@@ -26,7 +26,9 @@ launcherImage:
 launcherApp:
   envVars:
     CLUSTER_TOKEN: secret
-  args: ["--token", "$(CLUSTER_TOKEN)"]
+  args:
+    - "--token"
+    - "$(CLUSTER_TOKEN)"
 
 controllerImage:
   repository: kubebuild/workflow-controller
