@@ -3,9 +3,9 @@ entries:
   api:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-26T11:58:09.28916+11:00
+    created: 2018-10-31T20:07:07.991104+11:00
     description: Kubeapi chart
-    digest: 7577b705519606ebcaff566d234d09c8b0398ee6e4dece34a8562f358e82acdd
+    digest: 37375e15aa4f1f68814b5332d3fb23d8a1130bcac727b1b88d621ef77ad8de68
     name: api
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/api-0.2.2.tgz
@@ -13,9 +13,9 @@ entries:
   kube-launcher:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-26T11:58:09.289428+11:00
+    created: 2018-10-31T20:07:07.991583+11:00
     description: A chart for launching oss clusters
-    digest: 29f2888cc4f75cbaa388e2cf6c34ad3d9766e140d015c53ca1fa256ff79ab70a
+    digest: ca4ba6a3b9e5a4a2336c74937e665d49a87d0f89ae29f9cabb34b6592dedd8a3
     name: kube-launcher
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/kube-launcher-0.1.5.tgz
@@ -23,30 +23,30 @@ entries:
   kubebuild:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-26T11:58:09.290711+11:00
+    created: 2018-10-31T20:07:07.991988+11:00
     description: KubeBuild Chart
-    digest: 84ccc528a7effebf58becb9ae22d09d5ccf0ca6a79297533764979e46ae9b9b5
+    digest: 8911a086dcb53f3db0f1a19ff61de12ae40d2e0c78d45410b97f80f8e275328b
     name: kubebuild
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/kubebuild-0.6.6.tgz
     version: 0.6.6
-  - apiVersion: v1
-    appVersion: "1.0"
-    created: 2018-10-26T11:58:09.290329+11:00
-    description: KubeBuild Chart
-    digest: 8a14a02ae071c639752b44cd43b4a7c612d0f4b40bb3a3e498ef275849f31aa0
-    name: kubebuild
-    urls:
-    - https://raw.githubusercontent.com/kubebuild/charts/master/kubebuild-0.6.5.tgz
-    version: 0.6.5
   webhooks:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-26T11:58:09.290957+11:00
+    created: 2018-10-31T20:07:07.992849+11:00
+    description: A Helm chart for Kubernetes
+    digest: 8ce0effeff6a43cdf4db3432e7d2c81e3dddc6dc358c29f75ea177efd498cf09
+    name: webhooks
+    urls:
+    - https://raw.githubusercontent.com/kubebuild/charts/master/webhooks-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-10-31T20:07:07.992584+11:00
     description: A Helm chart for Kubernetes
     digest: 838da9a915397fb3b535acda0c260b66be0d5b54847d54d4b9f238298765ccc4
     name: webhooks
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/webhooks-0.1.0.tgz
     version: 0.1.0
-generated: 2018-10-26T11:58:09.287951+11:00
+generated: 2018-10-31T20:07:07.989791+11:00

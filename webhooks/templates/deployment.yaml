@@ -23,6 +23,12 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+          - name: BUGSNAG_API_KEY
+            valueFrom:
+              secretKeyRef:
+                name: webhook-secrets
+                key: bugsnag-api-key
           ports:
             - name: http
               containerPort: 9000
