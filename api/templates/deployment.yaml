@@ -36,13 +36,13 @@ spec:
             httpGet:
               path: {{ .Values.app.healthPath }}
               port: http
-            initialDelaySeconds: 90
+            initialDelaySeconds: 60
             periodSeconds: 1
           readinessProbe:
             httpGet:
               path: {{ .Values.app.healthPath }}
               port: http
-            initialDelaySeconds: 90
+            initialDelaySeconds: 60
             periodSeconds: 1
           resources:
 {{ toYaml .Values.resources | indent 12 }}
@@ -52,6 +52,9 @@ spec:
                     "-instances={{ .Values.dbInstance }}=tcp:5432",
                     "-credential_file=/secrets/cloudsql/credentials.json"]
           # [START cloudsql_security_context]
+          readinessProbe:
+            exec:
+              command: ["nc", "-z", "127.0.0.1", "5432"]
           livenessProbe:
             exec:
               command: ["nc", "-z", "127.0.0.1", "5432"]
