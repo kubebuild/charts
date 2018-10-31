@@ -3,19 +3,19 @@ entries:
   api:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-31T21:59:14.448071+11:00
+    created: 2018-10-31T22:03:27.658627+11:00
     description: Kubeapi chart
-    digest: e66bcabc9fe70b2df16c96c364f212ee943a10253f4b2f6e36f016596ffcfa4e
+    digest: 8d1c543093d564873e6e0cb5ea23b077086346837dbbca9465f9fadbf7c3dab4
     name: api
     urls:
-    - https://raw.githubusercontent.com/kubebuild/charts/master/api-0.2.5.tgz
-    version: 0.2.5
+    - https://raw.githubusercontent.com/kubebuild/charts/master/api-0.2.6.tgz
+    version: 0.2.6
   kube-launcher:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-31T21:59:14.448355+11:00
+    created: 2018-10-31T22:03:27.658903+11:00
     description: A chart for launching oss clusters
-    digest: 58c8f688e131b6b827da74eea48ab590db6d7cba6b8c545c9ef3f96e887413b6
+    digest: e24bb1a21921d6c4ba0ec74945d16a7627c92d9756cce6556f75b1c6043b447e
     name: kube-launcher
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/kube-launcher-0.1.5.tgz
@@ -23,9 +23,9 @@ entries:
   kubebuild:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-31T21:59:14.448797+11:00
+    created: 2018-10-31T22:03:27.659396+11:00
     description: KubeBuild Chart
-    digest: e5828a20f859d37f36fa66dd073f6f17053034d9f118d5093e8e48c45b4d3c06
+    digest: 93554b2cd6cec1799a3710ff1b847bdb96189ead36419dd643e4f5a9d8984a83
     name: kubebuild
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/kubebuild-0.6.6.tgz
@@ -33,11 +33,11 @@ entries:
   webhooks:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-10-31T21:59:14.449096+11:00
+    created: 2018-10-31T22:03:27.659719+11:00
     description: A Helm chart for Kubernetes
-    digest: 7e8d219a829121d640999cb32dcf68fa2325737acb4620e4c7c8987099073140
+    digest: e1722ab384c0d0168da5adb806e7f93092363324faab590bcc9a72a7dd731518
     name: webhooks
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/webhooks-0.1.1.tgz
     version: 0.1.1
-generated: 2018-10-31T21:59:14.446848+11:00
+generated: 2018-10-31T22:03:27.657335+11:00
