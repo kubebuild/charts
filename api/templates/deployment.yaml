@@ -36,42 +36,42 @@ spec:
             httpGet:
               path: {{ .Values.app.healthPath }}
               port: http
-            initialDelaySeconds: 60
+            initialDelaySeconds: 30
             periodSeconds: 1
           readinessProbe:
             httpGet:
               path: {{ .Values.app.healthPath }}
               port: http
-            initialDelaySeconds: 60
+            initialDelaySeconds: 30
             periodSeconds: 1
           resources:
 {{ toYaml .Values.resources | indent 12 }}
-        - name: cloudsql-proxy
-          image: gcr.io/cloudsql-docker/gce-proxy:1.11
-          command: ["/cloud_sql_proxy",
-                    "-instances={{ .Values.dbInstance }}=tcp:5432",
-                    "-credential_file=/secrets/cloudsql/credentials.json"]
-          # [START cloudsql_security_context]
-          readinessProbe:
-            exec:
-              command: ["nc", "-z", "127.0.0.1", "5432"]
-          livenessProbe:
-            exec:
-              command: ["nc", "-z", "127.0.0.1", "5432"]
-          securityContext:
-            runAsUser: 2  # non-root user
-            allowPrivilegeEscalation: false
-          # [END cloudsql_security_context]
-          volumeMounts:
-            - name: cloudsql-instance-credentials
-              mountPath: /secrets/cloudsql
-              readOnly: true
-        # [END proxy_container]
-      # [START volumes]
-      volumes:
-        - name: cloudsql-instance-credentials
-          secret:
-            secretName: cloudsql-instance-credentials
+      #   - name: cloudsql-proxy
+      #     image: gcr.io/cloudsql-docker/gce-proxy:1.11
+      #     command: ["/cloud_sql_proxy",
+      #               "-instances={{ .Values.dbInstance }}=tcp:5432",
+      #               "-credential_file=/secrets/cloudsql/credentials.json"]
+      #     # [START cloudsql_security_context]
+      #     readinessProbe:
+      #       exec:
+      #         command: ["nc", "-z", "127.0.0.1", "5432"]
+      #     livenessProbe:
+      #       exec:
+      #         command: ["nc", "-z", "127.0.0.1", "5432"]
+      #     securityContext:
+      #       runAsUser: 2  # non-root user
+      #       allowPrivilegeEscalation: false
+      #     # [END cloudsql_security_context]
+      #     volumeMounts:
+      #       - name: cloudsql-instance-credentials
+      #         mountPath: /secrets/cloudsql
+      #         readOnly: true
+      #   # [END proxy_container]
+      # # [START volumes]
+      # volumes:
+      #   - name: cloudsql-instance-credentials
+      #     secret:
+      #       secretName: cloudsql-instance-credentials
     {{- with .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml . | indent 8 }}
