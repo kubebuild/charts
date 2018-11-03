@@ -27,7 +27,7 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command: [sh, -c]
-          args: ["export POD_A_RECORD=$(echo $MY_POD_IP | sed 's/./-/g')i && bin/kube_api foreground"]
+          args: ["export POD_A_RECORD=$(echo $MY_POD_IP | sed 's/]./-/g') && bin/kube_api foreground"]
           env:
           - name: MY_POD_NAMESPACE
             valueFrom:
