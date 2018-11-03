@@ -3,9 +3,9 @@ entries:
   api:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T02:05:43.978493+11:00
+    created: 2018-11-04T02:07:31.492928+11:00
     description: Kubeapi chart
-    digest: d05532f9be1d863e0987657589c7886d6f64e4bedceeeee7c52cd899048164be
+    digest: 19c40e99ae24a47f122fb2314ebaea618e69a11f9f555e6e317ae43d31485a38
     name: api
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/api-0.3.4.tgz
@@ -13,9 +13,9 @@ entries:
   kube-launcher:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T02:05:43.978759+11:00
+    created: 2018-11-04T02:07:31.493204+11:00
     description: A chart for launching oss clusters
-    digest: 0e316554ffd87987e71ad01191fc9d50c0984d06d1ad75474b0fa2b0330d51d6
+    digest: 1c2fd9ea9688c5413f711ef6622e7a8b6cc1e3154b21a35069d3a5e3483995e8
     name: kube-launcher
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/kube-launcher-0.1.5.tgz
@@ -23,9 +23,9 @@ entries:
   kubebuild:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T02:05:43.979242+11:00
+    created: 2018-11-04T02:07:31.493642+11:00
     description: KubeBuild Chart
-    digest: 63e5c6584cd021dad62b16e3725b7fd196fc14d1e3c16ba8e599bbe3585dffeb
+    digest: a8c54162adc376d3d8212f6d71fceb1191430a1c45951e923f1d64080e03c3a2
     name: kubebuild
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/kubebuild-0.6.6.tgz
@@ -33,11 +33,11 @@ entries:
   webhooks:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T02:05:43.979537+11:00
+    created: 2018-11-04T02:07:31.494005+11:00
     description: A Helm chart for Kubernetes
-    digest: 6c0e96dde2a71f22efd515239b77cf1515cb16a512d8cb4644958a2db82ac25a
+    digest: ef4a7d8f35530f4342de86388611d63b095dfd769abdc31028202e027fcc9b4e
     name: webhooks
     urls:
     - https://raw.githubusercontent.com/kubebuild/charts/master/webhooks-0.1.1.tgz
     version: 0.1.1
-generated: 2018-11-04T02:05:43.97783+11:00
+generated: 2018-11-04T02:07:31.492329+11:00
