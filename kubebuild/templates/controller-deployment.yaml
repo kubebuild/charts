@@ -30,6 +30,9 @@ spec:
             - {{ template "kubebuild.fullname" . }}
             - --executor-image
             - "{{ .Values.executorImage.repository }}:{{ .Values.executorImage.tag }}"
+          envFrom:
+          - configMapRef:
+              name: "{{ template "kubebuild.fullname" . }}-agent"
           env:
           - name: ARGO_CONTAINER_RUNTIME_EXECUTOR
             value: kubelet

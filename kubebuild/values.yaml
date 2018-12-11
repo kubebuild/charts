@@ -26,6 +26,7 @@ launcherImage:
 launcherApp:
   envVars:
     CLUSTER_TOKEN: secret
+    #Any other env vars like proxy configs etc
   args:
     - "--token"
     - "$(CLUSTER_TOKEN)"
